@@ -1,8 +1,8 @@
 var receiveButton = document.querySelector('.receive-message');
 var messageOutput = document.querySelector('.message-box');
-var affirmationButton = document.querySelector('#affirmation');
-var mantraButton = document.querySelector('#mantra');
-var image = document.querySelector('.meditating-img');
+var affirmationButton = document.querySelector('#affirmations');
+var mantraButton = document.querySelector('#mantras');
+var image = document.querySelector('.meditation-image');
 var messageText = document.querySelector('.message-text');
 var clearMessageButton =document.querySelector('.clear-message');
 
@@ -51,8 +51,8 @@ function displayHide(display, hide) {
 }
 
 function getRandomIndex(array) {
-  Math.floor(Math.random() * array.length);
-  }
+  return Math.floor(Math.random() * array.length);
+}
 
 function changeMessageText(type) {
   messageText.innerText = type[getRandomIndex(type)];
@@ -68,11 +68,11 @@ function getrandomMessage() {
     displayHide(messageText, image);
   } else {
     clearMessageButton.classList.add('hidden');
-    alert('Please select a message!')
+    alert('Please select a message type!');
   }
-};
+}
 
 function clearMessage() {
-  displayHide(meditationImage, messageText);
+  displayHide(image, messageText);
   clearMessageButton.classList.add('hidden');
 };
