@@ -76,3 +76,15 @@ function clearMessage() {
   displayHide(image, messageText);
   clearMessageButton.classList.add('hidden');
 };
+
+function showError() {
+  if (affirmationButton.checked === false && mantraButton.checked === false) {
+    errorMessage.classList.remove('hidden')
+  }
+}
+
+function hideError() {
+  if (affirmationRadio.checked || mantraRadio.checked) {
+    errorMessage.classList.add('hidden');
+  }
+}
