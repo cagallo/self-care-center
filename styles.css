@@ -18,13 +18,14 @@ body {
   display: none !important;
 }
 
-.clear-msg {
+.clear-message {
   background-color: #134d71;
   border-color: #134d71;
   border-style: solid;
   color: #ffffff;
   height: 30px;
-  width: 225px;
+  width: 200px;
+  margin-top: 10px;
 }
 
 .receive-message {
