@@ -5,6 +5,7 @@ var mantraButton = document.querySelector('#mantras');
 var image = document.querySelector('.meditation-image');
 var messageText = document.querySelector('.message-text');
 var clearMessageButton =document.querySelector('.clear-message');
+var errorMessage = document.querySelector('.error-message');
 
 var affirmations = [
   'I forgive myself and set myself free.',
@@ -23,26 +24,29 @@ var affirmations = [
 ];
 
 var mantras = [
-'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.',
-'Don’t let yesterday take up too much of today.',
-'Every day is a second chance.',
-'Tell the truth and love everyone.',
-'I am free from sadness.',
-'I am enough.',
-'In the beginning it is you, in the middle it is you and in the end it is you.',
-'I love myself.',
-'I am present now.',
-'Inhale the future, exhale the past.',
-'This too shall pass.',
-'Yesterday is not today.',
-'The only constant is change.',
-'Onward and upward.',
-'I am the sky, the rest is weather.'
+  'Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.',
+  'Don’t let yesterday take up too much of today.',
+  'Every day is a second chance.',
+  'Tell the truth and love everyone.',
+  'I am free from sadness.',
+  'I am enough.',
+  'In the beginning it is you, in the middle it is you and in the end it is you.',
+  'I love myself.',
+  'I am present now.',
+  'Inhale the future, exhale the past.',
+  'This too shall pass.',
+  'Yesterday is not today.',
+  'The only constant is change.',
+  'Onward and upward.',
+  'I am the sky, the rest is weather.'
 ];
 
 
-receiveButton.addEventListener('click', getrandomMessage);
-clearMessageButton.addEventListener('click', clearMessage);
+receiveButton.addEventListener('click', getRandomMessage);
+clearMessageButton.addEventListener('click', function() {
+  clearMessage();
+  displayError();
+});
 
 
 function displayHide(display, hide) {
@@ -58,7 +62,7 @@ function changeMessageText(type) {
   messageText.innerText = type[getRandomIndex(type)];
 }
 
-function getrandomMessage() {
+function getRandomMessage() {
   clearMessageButton.classList.remove('hidden');
   if (affirmationButton.checked) {
     changeMessageText(affirmations);
@@ -75,16 +79,12 @@ function getrandomMessage() {
 function clearMessage() {
   displayHide(image, messageText);
   clearMessageButton.classList.add('hidden');
-};
-
-function showError() {
-  if (affirmationButton.checked === false && mantraButton.checked === false) {
-    errorMessage.classList.remove('hidden')
-  }
 }
 
-function hideError() {
-  if (affirmationRadio.checked || mantraRadio.checked) {
+function displayError() {
+  if (affirmationButton.checked === false && mantraButton.checked === false) {
+    errorMessage.classList.remove('hidden');
+  } else {
     errorMessage.classList.add('hidden');
   }
 }
