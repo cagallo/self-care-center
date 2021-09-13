@@ -18,16 +18,7 @@ h1 {
   display: none !important;
 }
 
-.clear-message {
-  background-color: #134d71;
-  border-color: #134d71;
-  border-style: solid;
-  color: #ffffff;
-  height: 30px;
-  width: 200px;
-  margin-top: 10px;
-  align-items: center;
-}
+
 
 .receive-message {
   background-color: #134d71;
@@ -39,6 +30,17 @@ h1 {
   width: 500px;
 }
 
+.clear-message {
+  align-items: center;
+  background-color: #134d71;
+  border-color: #134d71;
+  border-style: solid;
+  color: #ffffff;
+  height: 30px;
+  margin-top: 10px;
+  width: 200px;
+}
+
 h3 {
   color: #ffffff;
   margin-bottom: 10px;
@@ -48,53 +50,52 @@ h3 {
 
 .message-type-box {
   align-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  background-color: #ffffff;
   font-style: italic;
   height: 75px;
-  width: 400px;
-  border-radius: 10px;
+  justify-content: space-around;
   margin: auto;
   padding-top: 20px;
   padding-bottom: 10px;
   padding-left: 75px;
   padding-right: 100px;
+  width: 400px;
 }
 
 .message-box {
-  display: flex;
-  justify-content: center;
-  font-size: 18px;
   align-items: center;
   background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
   height: 125px;
-  width: 750px;
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
+  width: 750px;
 }
 
 img {
   height: 70px;
   width: 70px;
-  visibility: visible;
 }
 
 p {
-  text-align: center;
   margin-top: 5px;
+  text-align: center;
 }
 
 button {
   background-color: #134d71;
   border-color: #134d71;
+  border-radius: 5px;
   border-style: solid;
   color: #ffffff;
   font-size: 16px;
-  border-radius: 5px;
   height: 25px;
   width: 700px;
 };
