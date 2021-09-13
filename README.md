@@ -11,7 +11,7 @@ The spec for this project can be found [here](https://frontend.turing.io/project
 
 ## Functionality
 
-- Users can select affirmation or mantra and have a corresponding message appear on the page.
+- Users can select affirmation or mantra and have a corresponding message appear on the page by clicking the Receive Message button.
 - Users can clear their message after it appears on the screen by clicking the Clear Message button below the message box.
 
 ## Main Page View   
